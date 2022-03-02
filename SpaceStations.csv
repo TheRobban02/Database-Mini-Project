@@ -1,0 +1,16 @@
+Station ID;Planet;Refinery;Black Market;Hangars;Pads;Docking Ports;Name
+Port Olisar;Crusader;FALSE;FALSE;0;44;0;Port Olisar
+Everus Harbor;Hurston;FALSE;FALSE;6;8;2;Everus Harbor
+Port Tressler;MicroTech;FALSE;FALSE;8;12;2;Port Tressler
+Baijini Point;ArcCorp;FALSE;FALSE;8;8;2;Baijini Point
+Grim Hex;Na;FALSE;TRUE;13;6;0;Grim Hex
+HUR-L1;Na;TRUE;FALSE;8;8;2;Green Glade Station
+CRU-L5;Na;FALSE;TRUE;4;16;2;Beautiful Glen Station
+HUR-L2;Na;TRUE;FALSE;6;12;2;Faithful Dream Station
+HUR-L3;Na;FALSE;FALSE;2;4;0;Thundering Express Station
+HUR-L4;Na;FALSE;FALSE;8;14;2;Melodic Fields Station
+HUR-L5;Na;FALSE;FALSE;2;12;0;High Course Station
+CRU-L1;Na;TRUE;FALSE;6;12;2;Ambitious Dream Station
+CRU-L4;Na;FALSE;TRUE;2;12;0;Shallow Field Station
+ARC-L1;Na;TRUE;FALSE;8;12;2;Wide Forest Station
+MIC-L1;Na;TRUE;FALSE;4;16;2;Shallow Frontier Station
