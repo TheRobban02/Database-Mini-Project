@@ -1,85 +1,85 @@
-ship_name;manufacturer;price;buy_location;role;cargo_capacity(scu);lenght;race
-Avenger Stalker;Aegis Dynamics;882 200;Lorville;Interceptor;0;22.5;Human
-Avenger Titan;Aegis Dynamics;785 600;Lorville;Courier;8;22.5;Human
-Avenger Warlock;Aegis Dynamics;1 155 500;Lorville, New Babbage;Interceptor;0;22.5;Human
-Eclipse;Aegis Dynamics;3 490 000;Lorville;Stealth Bomber;0;20.5;Human
-Gladius;Aegis Dynamics;1 169 900;Lorville;Light Fighter;0;20;Human
-Hammerhead;Aegis Dynamics;12 459 900;Lorville;Corvette;40;112;Human
-Reclaimer;Aegis Dynamics;15 126 400;Lorville;Heavy Salvage;180;155;Human
-Retaliator;Aegis Dynamics;4 031 700;Lorville;Heavy Bomber;0;69.5;Human
-Sabre;Aegis Dynamics;2 183 300;Lorville;Stealth Fighter;0;24;Human
-Vanguard Hoplite;Aegis Dynamics;3 104 200;Lorville;Drop Ship;0;38;Human
-Vanguard Warden;Aegis Dynamics;3 387 800;Lorville;Heavy Fighter;0;38;Human
-Arrow;Anvil Aerospace;972 300;Area18;Light Fighter;0;16;Human
-F7C-M Super Hornet;Anvil Aerospace;2 132 600;Area18;Medium Fighter;0;25.5;Human
-F7C-R Hornet Tracker;Anvil Aerospace;1 832 100;Area18;Pathfinder;0;22.5;Human
-F7C-S Hornet Ghost;Anvil Aerospace;1 654 100;Area18;Stealth Fighter;0;25.5;Human
-Gladiator;Anvil Aerospace;1 954 500;Area18;Bomber;0;22.5;Human
-Hawk;Anvil Aerospace;1 284 400;Area18;Light Fighter;0;15;Human
-Hurricane;Anvil Aerospace;1 218 300;Area18;Heavy Fighter;0;22;Human
-Terrapin;Anvil Aerospace;2 568 100;Area18;Pathfinder;0;19.5;Human
-Valkyrie;Anvil Aerospace;4 454 400;Area18;Drop Ship;30;48;Human
-Khartu-Al;Aopoa;2 113 900;Area18;Light Fighter;0;31.5;Xi'an
-MPUV Cargo;Argo Astronautics;224 200;Lorville;Light Freight;2;9.5;Human
-Mustang Alpha;Consolidated Outland;251 400;Lorville;Light Freight;4;17.5;Human
-Mustang Beta;Consolidated Outland;404 000;Lorville;Pathfinder;0;17.5;Human
-Mustang Delta;Consolidated Outland;763 600;Area18;Light Fighter;0;17.5;Human
-Mustang Gamma;Consolidated Outland;627 500;Area18;Racing;0;17.5;Human
-Buccaneer;Drake Interplanetary;1 410 100;Lorville;Light Fighter;0;15;Human
-Caterpillar;Drake Interplanetary;4 686 600;Lorville;Medium Freight;576;111.5;Human
-Cutlass Black;Drake Interplanetary;1 385 300;Lorville;Medium Figher, Medium Freight;46;36;Human
-Herald;Drake Interplanetary;1 181 100;Lorville;Medium Data;0;23.5;Human
-Blade;Esperia;3 370 600;Area18;Light Fighter;0;15.5;Human
-P-52 Merlin;Kruger Intergalactic;135 500;Area18;Snub Fighter;0;12;Human
-Freelancer;(MISC) Musashi Industrial & Starflight Concern;1 697 600;Lorville;Medium Freight;66;38;Human
-Freelancer DUR;(MISC) Musashi Industrial & Starflight Concern ;1 967 600;Lorville;Expedition;36;38;Human
-Freelancer MAX;(MISC) Musashi Industrial & Starflight Concern ;2 181 500;Lorville;Heavy Freight;120;38;Human
-Freelancer MIS;(MISC) Musashi Industrial & Starflight Concern ;2 537 800;Lorville;Gun Ship;36;38;Human
-Prospector;(MISC) Musashi Industrial & Starflight Concern ;2 061 000;Lorville;Light Mining;32;24;Human
-Razor;(MISC) Musashi Industrial & Starflight Concern ;1 761 200;Lorville;Racing;0;11.5;Human
-Razor EX;(MISC) Musashi Industrial & Starflight Concern ;1 878 800;Area18, Lorville;Stealth Fighter;0;11.5;Human
-Razor LX;(MISC) Musashi Industrial & Starflight Concern ;1 823 800;Area18, Lorville;Racing;0;11.5;Human
-Reliant Kore;(MISC) Musashi Industrial & Starflight Concern ;744 700;Lorville;Light Freight;6;14.5;Human
-Starfarer;(MISC) Musashi Industrial & Starflight Concern ;6 651 500;Lorville;Heavy Refueling;291;101;Human
-Starfarer Gemini;(MISC) Musashi Industrial & Starflight Concern ;6 191 500;Lorville;Heavy Refueling;291;101;Human
-300i;Origin Jumpworks;767 200;Area18, New Babbage;Luxury;8;27;Human
-315p;Origin Jumpworks;882 600;Area18;Pathfinder;12;27;Human
-325a;Origin Jumpworks;944 200;Area18;Interceptor;4;27;Human
-350r;Origin Jumpworks;1 602 100;Area18;Racing;4;27;Human
-85X Limited;Origin Jumpworks;574 500;Area18, New Babbage;Luxury;0;13;Human
-M50 Interceptor;Origin Jumpworks;1 193 800;Area18, Lorville, New Babbage;Racing;0;11.5;Human
-Aurora CL;Roberts Space Industries;487 600;Lorville;Light Freight;6;18;Human
-Aurora ES;Roberts Space Industries;124 100;Lorville;Pathfinder;3;18;Human
-Aurora LN;Roberts Space Industries;338 400;Lorville, New Babbage;Light Fighter;3;18;Human
-Aurora LX;Roberts Space Industries;245 500;Lorville;Pathfinder;3;18;Human
-Aurora MR;Roberts Space Industries;184 900;Lorville;Light Fighter;3;18;Human
-Constellation Andromeda;Roberts Space Industries;3 548 000;Lorville, New Babbage;Medium Freight, Gun Ship;96;61;Human
-Constellation Aquila;Roberts Space Industries;4 926 700;Lorville;Expedition;96;61;Human
-Constellation Phoenix;Roberts Space Industries;5 658 800;Lorville, New Babbage;Luxury;96;61;Human
-Cutlass Blue;Drake Interplanetary;2493500;Lorville;Medium Fighter, Medium Freight;12;36;Human
-Cutlass Red;Drake Interplanetary;1810500;Lorville;Medical;12;36;Human
-Defender;Banu;2781000;Area18;Light Fighter;0;33.5;Banu
-F7C Hornet;Anvil Aerospace;1492700;Area18;Medium Fighter;0;22.5;Human
-M2 Hercules Starlifter;Crusader Industries;5225300;Lorville;Courier;523;94;Human
-Mantis;Roberts Space Industries;1230000;Lorville;Interceptor;0;30;Human
-100i;Origin Jumpworks;654000;Area18, Lorville;Pathfinder;2;15;Human
-125a;Origin Jumpworks;791000;Lorville;Light Fighter;2;15;Human
-135c;Origin Jumpworks;839000;Area18;Light Fighter;0;15;Human
-600i;Origin Jumpworks;9475100;Area18, New Babbage;Luxury;40;91.5;Human
-600i Touring;Origin Jumpworks;9894000;Area18;Luxury;12;91.5;Human
-890 Jump;Origin Jumpworks;32294500;Area18, Lorville;Luxury;100;210;Human
-C2 Hercules Starlifter;Crusader Industries;4925500;Area18, Orison;Courier;696;94;Human
-C8X Pisces Expedition;Anvil Aerospace;406000;Area18;Pathfinder;4;13;Human
-Constellation Taurus;Roberts Space Industries;3256400;Lorville;Medium Freight;174;61;Human
-Mercury Star Runner;Crusader Industries;4912500;Orison;Medium Freight;114;56;Human
-Mole;Argo Astronautics;5130500;Lorville;Medium Mining;115;45;Human
-MPUV Personnel;Argo Astronautics;233000;Lorville;Passenger;0;9.25;Human
-Nomad;Consolidated Outland;952800;Lorville;Light Freight;24;26.5;Human
-Prowler;Esperia;4248200;Area18;Drop Ship;0;34;Human
-Reliant Mako;(MISC) Musashi Industrial & Starflight Concern ;780000;Lorville;Reporting;0;14.5;Human
-Reliant Sen;(MISC) Musashi Industrial & Starflight Concern ;840000;Lorville;Light Science;2;14.5;Human
-Reliant Tana;(MISC) Musashi Industrial & Starflight Concern ;870000;Lorville;Light Fighter;1;14.5;Human
-Talon;Esperia;1854500;Area18;Fighter;0;20;Human
-Talon Shrike;Esperia;2259200;Area18;Fighter;0;20;Human
-Vanguard Harbringer;Aegis Dynamics;2050500;Lorville;Heavy Fighter;0;38;Human
-Vanguard Sentinel;Aegis Dynamics;2012000;Lorville;Heavy Fighter;0;38;Human
+ship_name;manufacturer;price;buy_location;role;cargo_capacity;lenght;race
+Avenger Stalker;Aegis Dynamics;882200;Lorville;Interceptor;0,00;22,50;Human
+Avenger Titan;Aegis Dynamics;785600;Lorville;Courier;8,00;22,50;Human
+Avenger Warlock;Aegis Dynamics;1155500;Lorville, New Babbage;Interceptor;0,00;22,50;Human
+Eclipse;Aegis Dynamics;3490000;Lorville;Stealth Bomber;0,00;20,50;Human
+Gladius;Aegis Dynamics;1169900;Lorville;Light Fighter;0,00;20,00;Human
+Hammerhead;Aegis Dynamics;12459900;Lorville;Corvette;40,00;112,00;Human
+Reclaimer;Aegis Dynamics;15126400;Lorville;Heavy Salvage;180,00;155,00;Human
+Retaliator;Aegis Dynamics;4031700;Lorville;Heavy Bomber;0,00;69,50;Human
+Sabre;Aegis Dynamics;2183300;Lorville;Stealth Fighter;0,00;24,00;Human
+Vanguard Hoplite;Aegis Dynamics;3104200;Lorville;Drop Ship;0,00;38,00;Human
+Vanguard Warden;Aegis Dynamics;3387800;Lorville;Heavy Fighter;0,00;38,00;Human
+Arrow;Anvil Aerospace;972300;Area18;Light Fighter;0,00;16,00;Human
+F7C-M Super Hornet;Anvil Aerospace;2132600;Area18;Medium Fighter;0,00;25,50;Human
+F7C-R Hornet Tracker;Anvil Aerospace;1832100;Area18;Pathfinder;0,00;22,50;Human
+F7C-S Hornet Ghost;Anvil Aerospace;1654100;Area18;Stealth Fighter;0,00;25,50;Human
+Gladiator;Anvil Aerospace;1954500;Area18;Bomber;0,00;22,50;Human
+Hawk;Anvil Aerospace;1284400;Area18;Light Fighter;0,00;15,00;Human
+Hurricane;Anvil Aerospace;1218300;Area18;Heavy Fighter;0,00;22,00;Human
+Terrapin;Anvil Aerospace;2568100;Area18;Pathfinder;0,00;19,50;Human
+Valkyrie;Anvil Aerospace;4454400;Area18;Drop Ship;30,00;48,00;Human
+Khartu-Al;Aopoa;2113900;Area18;Light Fighter;0,00;31,50;Xi'an
+MPUV Cargo;Argo Astronautics;224200;Lorville;Light Freight;2,00;9,50;Human
+Mustang Alpha;Consolidated Outland;251400;Lorville;Light Freight;4,00;17,50;Human
+Mustang Beta;Consolidated Outland;404000;Lorville;Pathfinder;0,00;17,50;Human
+Mustang Delta;Consolidated Outland;763600;Area18;Light Fighter;0,00;17,50;Human
+Mustang Gamma;Consolidated Outland;627500;Area18;Racing;0,00;17,50;Human
+Buccaneer;Drake Interplanetary;1410100;Lorville;Light Fighter;0,00;15,00;Human
+Caterpillar;Drake Interplanetary;4686600;Lorville;Medium Freight;576,00;111,50;Human
+Cutlass Black;Drake Interplanetary;1385300;Lorville;Medium Figher, Medium Freight;46,00;36,00;Human
+Herald;Drake Interplanetary;1181100;Lorville;Medium Data;0,00;23,50;Human
+Blade;Esperia;3370600;Area18;Light Fighter;0,00;15,50;Human
+P-52 Merlin;Kruger Intergalactic;135500;Area18;Snub Fighter;0,00;12,00;Human
+Freelancer;(MISC) Musashi Industrial & Starflight Concern;1697600;Lorville;Medium Freight;66,00;38,00;Human
+Freelancer DUR;(MISC) Musashi Industrial & Starflight Concern ;1967600;Lorville;Expedition;36,00;38,00;Human
+Freelancer MAX;(MISC) Musashi Industrial & Starflight Concern ;2181500;Lorville;Heavy Freight;120,00;38,00;Human
+Freelancer MIS;(MISC) Musashi Industrial & Starflight Concern ;2537800;Lorville;Gun Ship;36,00;38,00;Human
+Prospector;(MISC) Musashi Industrial & Starflight Concern ;2061000;Lorville;Light Mining;32,00;24,00;Human
+Razor;(MISC) Musashi Industrial & Starflight Concern ;1761200;Lorville;Racing;0,00;11,50;Human
+Razor EX;(MISC) Musashi Industrial & Starflight Concern ;1878800;Area18, Lorville;Stealth Fighter;0,00;11,50;Human
+Razor LX;(MISC) Musashi Industrial & Starflight Concern ;1823800;Area18, Lorville;Racing;0,00;11,50;Human
+Reliant Kore;(MISC) Musashi Industrial & Starflight Concern ;744700;Lorville;Light Freight;6,00;14,50;Human
+Starfarer;(MISC) Musashi Industrial & Starflight Concern ;6651500;Lorville;Heavy Refueling;291,00;101,00;Human
+Starfarer Gemini;(MISC) Musashi Industrial & Starflight Concern ;6191500;Lorville;Heavy Refueling;291,00;101,00;Human
+300i;Origin Jumpworks;767200;Area18, New Babbage;Luxury;8,00;27,00;Human
+315p;Origin Jumpworks;882600;Area18;Pathfinder;12,00;27,00;Human
+325a;Origin Jumpworks;944200;Area18;Interceptor;4,00;27,00;Human
+350r;Origin Jumpworks;1602100;Area18;Racing;4,00;27,00;Human
+85X Limited;Origin Jumpworks;574500;Area18, New Babbage;Luxury;0,00;13,00;Human
+M50 Interceptor;Origin Jumpworks;1193800;Area18, Lorville, New Babbage;Racing;0,00;11,50;Human
+Aurora CL;Roberts Space Industries;487600;Lorville;Light Freight;6,00;18,00;Human
+Aurora ES;Roberts Space Industries;124100;Lorville;Pathfinder;3,00;18,00;Human
+Aurora LN;Roberts Space Industries;338400;Lorville, New Babbage;Light Fighter;3,00;18,00;Human
+Aurora LX;Roberts Space Industries;242500;Lorville;Pathfinder;3,00;18,00;Human
+Aurora MR;Roberts Space Industries;184900;Lorville;Light Fighter;3,00;18,00;Human
+Constellation Andromeda;Roberts Space Industries;3548000;Lorville, New Babbage;Medium Freight, Gun Ship;96,00;61,00;Human
+Constellation Aquila;Roberts Space Industries;4926700;Lorville;Expedition;96,00;61,00;Human
+Constellation Phoenix;Roberts Space Industries;5658800;Lorville, New Babbage;Luxury;96,00;61,00;Human
+Cutlass Blue;Drake Interplanetary;2493500;Lorville;Medium Fighter, Medium Freight;12,00;36,00;Human
+Cutlass Red;Drake Interplanetary;1810500;Lorville;Medical;12,00;36,00;Human
+Defender;Banu;2781000;Area18;Light Fighter;0,00;33,50;Banu
+F7C Hornet;Anvil Aerospace;1492700;Area18;Medium Fighter;0,00;22,50;Human
+M2 Hercules Starlifter;Crusader Industries;5225300;Lorville;Courier;523,00;94,00;Human
+Mantis;Roberts Space Industries;1230000;Lorville;Interceptor;0,00;30,00;Human
+100i;Origin Jumpworks;654000;Area18, Lorville;Pathfinder;2,00;15,00;Human
+125a;Origin Jumpworks;791000;Lorville;Light Fighter;2,00;15,00;Human
+135c;Origin Jumpworks;839000;Area18;Light Fighter;0,00;15,00;Human
+600i;Origin Jumpworks;9475100;Area18, New Babbage;Luxury;40,00;91,50;Human
+600i Touring;Origin Jumpworks;9894000;Area18;Luxury;12,00;91,50;Human
+890 Jump;Origin Jumpworks;32294500;Area18, Lorville;Luxury;100,00;210,00;Human
+C2 Hercules Starlifter;Crusader Industries;4925500;Area18, Orison;Courier;696,00;94,00;Human
+C8X Pisces Expedition;Anvil Aerospace;406000;Area18;Pathfinder;4,00;13,00;Human
+Constellation Taurus;Roberts Space Industries;3256400;Lorville;Medium Freight;174,00;61,00;Human
+Mercury Star Runner;Crusader Industries;4912500;Orison;Medium Freight;114,00;56,00;Human
+Mole;Argo Astronautics;5130500;Lorville;Medium Mining;115,00;45,00;Human
+MPUV Personnel;Argo Astronautics;233000;Lorville;Passenger;0,00;9,25;Human
+Nomad;Consolidated Outland;952800;Lorville;Light Freight;24,00;26,50;Human
+Prowler;Esperia;4248200;Area18;Drop Ship;0,00;34,00;Human
+Reliant Mako;(MISC) Musashi Industrial & Starflight Concern ;780000;Lorville;Reporting;0,00;14,50;Human
+Reliant Sen;(MISC) Musashi Industrial & Starflight Concern ;840000;Lorville;Light Science;2,00;14,50;Human
+Reliant Tana;(MISC) Musashi Industrial & Starflight Concern ;870000;Lorville;Light Fighter;1,00;14,50;Human
+Talon;Esperia;1854500;Area18;Fighter;0,00;20,00;Human
+Talon Shrike;Esperia;2259200;Area18;Fighter;0,00;20,00;Human
+Vanguard Harbringer;Aegis Dynamics;2050500;Lorville;Heavy Fighter;0,00;38,00;Human
+Vanguard Sentinel;Aegis Dynamics;2012000;Lorville;Heavy Fighter;0,00;38,00;Human

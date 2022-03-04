@@ -24,29 +24,28 @@ def CreateDatabase():
     
     # Create Table
     cursor.execute(f"USE {DB_NAME}")
-    cursor.execute("CREATE TABLE Planets (name nvarchar(50) not null primary key, capital nvarchar(50), system nvarchar(20),\
-        moons nvarchar(100), space_station nvarchar(50), minTemp int, maxTemp int))")
+    cursor.execute("CREATE TABLE Planets (planet_name nvarchar(50) not null primary key, capital nvarchar(50), system nvarchar(20),\
+        moons nvarchar(100), space_station nvarchar(50), min_temp int, max_temp int)")
     
     # Create Table
     cursor.execute(f"USE {DB_NAME}")
-    cursor.execute("CREATE TABLE Species (name varchar(50) not null primary key, sentient boolean, language nvarchar(20),\
+    cursor.execute("CREATE TABLE Species (species_name varchar(50) not null primary key, sentient nvarchar(20), language nvarchar(20),\
         goverment nvarchar(100))")
 
     cursor.execute(f"USE {DB_NAME}")
-    cursor.execute("CREATE TABLE Ships (name nvarchar(50) not null primary key, manufacturer nvarchar(60), price int,\
-        buy_location nvarchar(50), role nvarchar(50), cargo_capacity_(SCU) int, lenght float, race nvarchar(20))")
+    cursor.execute("CREATE TABLE Ships (ship_name nvarchar(50) not null primary key, manufacturer nvarchar(60), price int,\
+        buy_location nvarchar(50), role nvarchar(50), cargo_capacity int, lenght float, race nvarchar(20))")
 
     # Create Table
     cursor.execute(f"USE {DB_NAME}")
-    cursor.execute("CREATE TABLE Weapons (name nvarchar(50) not null primary key, type nvarchar(50), size int,\
-        dps int, fire int, buy_location nvarchar(50), price int))")
+    cursor.execute("CREATE TABLE Weapons (weapon_name nvarchar(50) not null primary key, type nvarchar(50), size int,\
+        dps int, fire_rate int, buy_location nvarchar(50), price int)")
 
     cursor.execute(f"USE {DB_NAME}")
-    cursor.execute("CREATE TABLE Stations (station_id nvarchar(50) not null primary key, planet nvarchar(50), refinery boolean,\
-        black_market boolean, hangars int, pads int, docking_ports int, name nvarchar(50), system nvarchar20))")
+    cursor.execute("CREATE TABLE Stations (station_id nvarchar(50) not null primary key, planet nvarchar(50), refinery nvarchar(20),\
+        black_market nvarchar(20), hangars int, pads int, docking_ports int, station_name nvarchar(50), system nvarchar(20))")
 
     PopulateTables()
-
 
 def PopulateTables():
     
@@ -77,7 +76,7 @@ def PopulateTables():
     for i,row in data.iterrows():
             
         #here %S means string values 
-        sql = f"INSERT INTO {DB_NAME}.ships VALUES (%s,%s,%s,%s,%s,%s,%s)"
+        sql = f"INSERT INTO {DB_NAME}.ships VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
         cursor.execute(sql, tuple(row))
             
         #save our changes
