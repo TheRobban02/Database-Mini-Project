@@ -10,6 +10,106 @@ connection = mysql.connect(
     passwd = "root"
 
 )
+<<<<<<< HEAD
+=======
+
+# Main Menu
+def MainMenu():
+
+    cursor = connection.cursor(buffered=True)
+    cursor.execute(f"USE {DB_NAME}")
+
+    choice = input("\n1. List all planets\
+        \n2. Search for planet details\
+        \n3. Search for species with height higher than given number\
+        \n4. What is the most likely desired climate of the given species?\
+        \n5. What is the average lifespan per species classification?\
+        \nQ: Quit\
+        \n--------\
+        \nChoice:  ")
+
+    if (choice == "1"):
+        
+        cursor.execute("SELECT name FROM Planets")
+        records = cursor.fetchall()
+        
+        for row in records:
+            print(row[0])
+        
+        print("\nPress any key to return to main menu: ")
+
+        # Listens to any keypress
+        if(msvcrt.getch()):
+            MainMenu()
+
+    elif (choice == "2"):
+
+        planetName = input("Enter the name of the planet: ")
+        cursor.execute(f"SELECT * FROM Planets WHERE name = '{planetName}'")
+        records = cursor.fetchall()
+
+        for row in records:
+            for i in row:
+                print(i)
+        
+        print("\nPress any key to return to main menu: ")
+
+        # Listens to any keypress
+        if(msvcrt.getch()):
+            MainMenu()
+
+    elif (choice == "3"):
+
+        height = int(input("Enter the average height of the species: "))
+        cursor.execute(f"SELECT name FROM Species WHERE average_height > {height}")
+        records = cursor.fetchall()
+
+        for row in records:
+            print(row[0])
+        
+        print("\nPress any key to return to main menu: ")
+
+        # Listens to any keypress
+        if(msvcrt.getch()):
+            MainMenu()
+
+    elif (choice == "4"):
+
+        specie = input("Enter the name of the specie: ")
+        cursor.execute(f"SELECT climate FROM Planets, Species WHERE Species.name = '{specie}' and Species.homeworld = Planets.name")
+
+        records = cursor.fetchall()
+
+        for row in records:
+            print(f"Desired climate: {row[0]}")
+        
+        print("\nPress any key to return to main menu: ")
+
+        # Listens to any keypress
+        if(msvcrt.getch()):
+            MainMenu()
+
+    elif (choice == "5"):
+        cursor.execute(f"SELECT classification, ROUND(AVG(average_lifespan), 1) FROM Species WHERE average_lifespan != '0' and classification != '0' GROUP BY classification")
+        records = cursor.fetchall()
+
+        for row in records:
+            if(row[1]) == 1010:
+                print(f"Classification: {row[0]}, Average Lifespan: Indefinite")
+            else:
+                print(f"Classification: {row[0]}, Average Lifespan: {row[1]}")
+
+        print("\nPress any key to return to main menu: ")
+        
+        # Listens to any keypress
+        if(msvcrt.getch()):
+            MainMenu()
+
+    else:
+        exit()
+
+# This will need to change
+>>>>>>> e1f81e4a5fce225af1ed064dfec650d249b12130
 def CreateDatabes():
 
     cursor = connection.cursor(buffered=True)
@@ -58,6 +158,7 @@ dataSpecies = pd.read_csv (r'species.csv', delimiter=",")
 dataShips = pd.read_csv(r'SpaceStations.csv', delimiter=",")
 # TODO dataWeapons = pd.read_csv(r'')
 
+<<<<<<< HEAD
 # Removes row in planets where name is NaN
 dataP.dropna(subset = ["name"], inplace=True)
 
@@ -68,6 +169,8 @@ dataS["average_lifespan"].replace({"indefinite": 1010}, inplace=True)
 dataS["classification"].replace({"reptilian": "reptile"}, inplace=True)
 dataS["classification"].replace({"mammals": "mammal"}, inplace=True)
 
+=======
+>>>>>>> e1f81e4a5fce225af1ed064dfec650d249b12130
 cursor = connection.cursor()
 cursor.execute("show databases")
 lst = cursor.fetchall()
