@@ -1,4 +1,4 @@
-Name;Type;Size;DPS;Fire Rate;Buy Location;Price
+weapon_name;type;size;dps;fire_rate;buy_location;price
 10-Series Greatsword;Ballistic Cannon;2;504;220;Port Olisar, HUR-L3;11050
 11-Series Greatsword;Ballistic Cannon;3;625;200;Area18, New Babbage;23100
 9-Series Greatsword;Ballistic Cannon;1;425;240;Port Olisar, HUR-L3;6250

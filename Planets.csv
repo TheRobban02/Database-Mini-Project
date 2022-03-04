@@ -1,5 +1,5 @@
-Planet Name;Capital;System;Moons;Space Station;minTemp;maxTemp
+planet_name;capital;system;moons;space_station;min_temp;max_temp
 Crusader;Orison;Stanton;Yela, Cellin, Deymar;Port Olisar;-35;0
 MicroTech;New Babbage;Stanton;Calliope, Clio, Euterpe;Port Tressler;-100;10
 Hurston;Lorville;Stanton;Aberdeen, Arial, Ita, Magda;Everus Harbor;-11;29
-ArcCorp;Area18;Stanton;Lyria, Wala,;Baijini Point;6;23
+ArcCorp;Area 18;Stanton;Lyria, Wala,;Baijini Point;6;23

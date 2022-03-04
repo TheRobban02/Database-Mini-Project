@@ -1,7 +1,7 @@
-Name;Sentient;Language;Goverment
-Banu;TRUE;Banu;Banu Protectorate
-Human;TRUE;UEE Standard;United Empire of Earth
-Xi'an;TRUE;uo'aXy'an;Xi'an Empire
-Tevarin;TRUE;Tevarin;Tevarian Sovereignty
-Vanduul;TRUE;Vanduul;Tribialism
-Kr'Thak;TRUE;NA;NA
+species_name;sentient;language;goverment
+Banu;SANT;Banu;Banu Protectorate
+Human;SANT;UEE Standard;United Empire of Earth
+Xi'an;SANT;uo'aXy'an;Xi'an Empire
+Tevarin;SANT;Tevarin;Tevarian Sovereignty
+Vanduul;SANT;Vanduul;Tribialism
+Kr'Thak;SANT;NA;NA

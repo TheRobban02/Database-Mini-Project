@@ -1,4 +1,4 @@
-Station ID;Planet;Refinery;Black Market;Hangars;Pads;Docking Ports;Name;System
+station_id;planet;refinery;black_market;hangars;pads;docking_ports;station_name;system
 Port Olisar;Crusader;FALSKT;FALSKT;0;44;0;Port Olisar;Stanton
 Everus Harbor;Hurston;FALSKT;FALSKT;6;8;2;Everus Harbor;Stanton
 Port Tressler;MicroTech;FALSKT;FALSKT;8;12;2;Port Tressler;Stanton

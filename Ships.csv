@@ -1,4 +1,4 @@
-Name;Manufacturer;Price;Buy Location;Role;Cargo Capacity (SCU);Lenght;Race
+ship_name;manufacturer;price;buy_location;role;cargo_capacity(scu);lenght;race
 Avenger Stalker;Aegis Dynamics;882 200;Lorville;Interceptor;0;22.5;Human
 Avenger Titan;Aegis Dynamics;785 600;Lorville;Courier;8;22.5;Human
 Avenger Warlock;Aegis Dynamics;1 155 500;Lorville, New Babbage;Interceptor;0;22.5;Human
