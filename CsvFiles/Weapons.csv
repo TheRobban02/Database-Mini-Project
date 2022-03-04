@@ -1,0 +1,89 @@
+Name;Type;Size;DPS;Fire Rate;Buy Location;Price
+10-Series Greatsword;Ballistic Cannon;2;504;220;Port Olisar, HUR-L3;11050
+11-Series Greatsword;Ballistic Cannon;3;625;200;Area18, New Babbage;23100
+9-Series Greatsword;Ballistic Cannon;1;425;240;Port Olisar, HUR-L3;6250
+C-788;Ballistic Cannon;4;176;50;Area18, CRU-L5, HUR-L3;23500
+CVSA;Ballistic Cannon;2;524;220;Area18, New Babbage, Port Olisar, HUR-L2, HUR-L3;12400
+Deadbolt I;Ballistic Cannon;1;425;240;New Babbage;6630
+Deadbolt II;Ballistic Cannon;2;504;220;New Babbage;12690
+Deadbolt III;Ballistic Cannon;3;625;200;New Babbage;18240
+Deadbolt IV;Ballistic Cannon;4;788;180;New Babbage;28200
+Deadbolt V;Ballistic Cannon;5;2188;70;New Babbage;69030
+DeadBolt VI;Ballistic Cannon;6;2708;65;New Babbage;114614
+Sledge I Mass Driver;Ballistic Cannon;1;340;120;Area18, New Babbage;9750
+Sledge II Mass Driver;Ballistic Cannon;2;403;110;Area18, New Babbage;13450
+Sledge III Mass Driver;Ballistic Cannon;3;500;100;Area18, New Babbage;32500
+Strife Mass Driver;Ballistic Cannon;2;403;110;Port Olisar, New Babbage, Orison;14350
+Tarantula GT-870 Mk 1;Ballistic Cannon;1;425;240;Area18, New Babbage;9500
+Tarantula GT-870 Mk 2;Ballistic Cannon;2;504;220;HUR-L3, HUR-L5;12300
+Tarantula GT-870 Mk 3;Ballistic Cannon;3;625;200;CRU-L5, HUR-L5;28450
+Draugar;Ballistic Gatling;6;1473;850;CRU-L5;69650
+Mantis GT-220;Ballistic Gatling;3;800;1000;Orison, CRU-L5;13500
+Revenant;Ballistic Gatling;4;1032;900;Port Olisar;42950
+Scorpion GT-215;Ballistic Gatling;2;645;1100;Orison, HUR-L3, HUR-L4;7850
+Tigerstrike T-19P;Ballistic Gatling;2;645;1100;Area18, New Babbage;7550
+Tigerstrike T-21;Ballistic Gatling;3;800;1000;CRU-L5;13000
+Yellowjacket GT-210;Ballistic Gatling;1;544;1200;Orison, HUR-L4, HUR-L5;4600
+BRVS;Ballistic Repeater;2;660;600;Area18, New Babbage, HUR-L5;8850
+SW16BR1 Buzzsaw;Ballistic Repeater;1;506;700;Area18, New Babbage, Orison, Grim Hex;6500
+SW16BR2 Sawbuck;Ballistic Repeater;2;620;600;Orison, Area18, HUR-L5;8400
+SW16BR3 Shredder;Ballistic Repeater;3;775;500;Orison, Area18, HUR-L5;15650
+Havoc;Ballistic Scattergun;1;540;100;Port Olisar;6850
+Hellion;Ballistic Scattergun;2;612;85;Port Olisar;10750
+Predator;Ballistic Scattergun;3;693;70;Orison;18450
+EVSD;Distortion Cannon;2;281;84;Area18, New Babbage, Orison, HUR-L4;7200
+Suckerpunch;Distortion Cannon;1;188;93;Orison, CRU-L5, HUR-L2, HUR-L4;2600
+Suckerpunch-L;Distortion Cannon;2;253;84;Orison, HUR-L3, HUR-L4;4650
+Suckerpunch-XL;Distortion Cannon;3;339;75;New Babbage, Orison, HUR-L3;10050
+ATVS;Distortion Repeater;2;241;49;Area18, New Babbage, Port Olisar, HUR-L3;8250
+DR Model-XJ1;Distortion Repeater;1;165;31;Area18, New Babbage, HUR-L2;1450
+DR Model-XJ2;Distortion Repeater;2;211;43;Area18, New Babbage, HUR-L2;3000
+DR Model-XJ3;Distortion Repeater;3;248;55;New Babbage;6150
+Absolution;Distortion Scattergun;5;725;80;Area18, HUR-L3;19950
+Condemnation;Distortion Scattergun;6;1010;75;Area18, HUR-L3;18950
+Salvation;Distortion Scattergun;4;521;85;New Babbage, Area18;10700
+FL-11;Laser Cannon;1;340;240;Area18, Port Olisar;5200
+FL-22;Laser Cannon;2;403;220;New Babbage, CRU-L5, HUR-L3, HUR-L5;9550
+FL-33;Laser Cannon;3;500;200;Port Olisar, HUR-L4, HUR-L5;19200
+Lightstrike I;Laser Cannon;1;340;240;New Babbage;6360
+Lightstrike II;Laser Cannon;2;403;220;New Babbage;12720
+Lightstrike III;Laser Cannon;3;500;200;New Babbage;29100
+Lightstrike IV;Laser Cannon;4;630;180;New Babbage;43320
+Lightstrike V;Laser Cannon;5;1750;70;New Babbage;60380
+Lightstrike VI;Laser Cannon;6;2000;60;New Babbage;118810
+M3A;Laser Cannon;1;340;240;Port Olisar, HUR-L2, HUR-L4;5300
+M4A;Laser Cannon;2;403;220;Port Olisar, HUR-L3, HUR-L5;9950
+M5A;Laser Cannon;3;500;200;CRU-L5, HUR-L5;19300
+M6A;Laser Cannon;4;630;180;CRU-L5, HUR-L2;39050
+M7A;Laser Cannon;5;1750;70;Port Olisar, HUR-L2;76700
+M8A;Laser Cannon;6;2000;60;Area18, New Babbage, HUR-L5;127350
+MVSA;Laser Cannon;2;504;220;Orison;9500
+NN-13;Laser Cannon;1;340;240;HUR-L2;7450
+NN-14;Laser Cannon;2;403;220;HUR-L2, HUR-L3;14150
+Omnisky III;Laser Cannon;1;340;240;Orison, CRU-L5, HUR-L3;5200
+Omnisky IX;Laser Cannon;3;500;200;Orison, CRU-L5, HUR-L5;18650
+Omnisky VI;Laser Cannon;2;403;220;Orison, CRU-L5, HUR-L2;10600
+Omnisky XII;Laser Cannon;4;630;180;HUR-L4, HUR-L5;41950
+Omnisky XV;Laser Cannon;5;1750;70;New Babbage, HUR-L3;59300
+Omnisky XVII;Laser Cannon;6;2000;60;HUR-L2, HUR-L3;117150
+Quarreler;Laser Cannon;3;500;200;HUR-L2, HUR-L5;24250
+Attrition-1;Laser Repeater;1;336;720;Lorville;3800
+Attrition-2;Laser Repeater;2;400;600;Lorville;6950
+Attrition-3;Laser Repeater;3;500;500;Lorville;12000
+Attrition-4;Laser Repeater;4;640;480;Lorville;25200
+Attrition-5;Laser Repeater;5;1013;225;Lorville;41000
+Attrition-6;Laser Repeater;6;1167;200;Lorville;73450
+CF-117 Bulldog;Laser Repeater;1;336;720;New Babbage, Area18;3700
+CF-227 Badger;Laser Repeater;2;400;600;New Babbage, Area18;6150
+CF-337 Panther;Laser Repeater;3;500;500;New Babbage, Area18;10500
+CF-447 Rhino;Laser Repeater;4;640;480;New Babbage;22250
+CF-557 Galdereen;Laser Repeater;5;1013;225;New Babbage, Area18;37350
+CF-667 Mammoth;Laser Repeater;6;1167;200;New Babbage, Area18;63800
+GVSR;Laser Repeater;2;440;600;New Babbage, Area18, Port Olisar, CRU-L5, HUR-L3;6500
+NDB-26;Laser Repeater;1;336;720;Area18, New Babbage, CRU-L5, HUR-L5;4400
+NDB-28;Laser Repeater;2;400;600;New Babbage, CRU-L5;7650
+NDB-30;Laser Repeater;3;500;500;Area18, New Babbage, CRU-L5;13950
+Dominance-1;Laser Scattergun;1;400;100;Lorville;7100
+Dominance-2;Laser Scattergun;2;453;85;Lorville;9850
+Dominance-3;Laser Scattergun;3;513;70;Lorville;17950
+PyroBurst;Laser Scattergun;3;429;70;Area18, CRU-L5, HUR-L5;12900
