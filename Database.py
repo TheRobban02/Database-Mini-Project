@@ -108,6 +108,7 @@ def MainMenu():
     else:
         exit()
 
+# This will need to change
 def CreateDatabes():
 
     cursor = connection.cursor(buffered=True)
@@ -157,20 +158,6 @@ dataPlanets = pd.read_csv (r'planets.csv', delimiter=",")
 dataSpecies = pd.read_csv (r'species.csv', delimiter=",")
 dataShips = pd.read_csv(r'SpaceStations.csv', delimiter=",")
 # TODO dataWeapons = pd.read_csv(r'')
-
-# Removes row in planets where name is NaN
-dataP.dropna(subset = ["name"], inplace=True)
-
-# Replaces NaN with 0
-dataP = dataP.replace(np.nan, 0)
-dataS = dataS.replace(np.nan, 0)
-
-# Replaces indefinite with 1010 to easier handle it
-dataS["average_lifespan"].replace({"indefinite": 1010}, inplace=True)
-
-# Change reptilian to reptile and mammals to mammal
-dataS["classification"].replace({"reptilian": "reptile"}, inplace=True)
-dataS["classification"].replace({"mammals": "mammal"}, inplace=True)
 
 cursor = connection.cursor()
 cursor.execute("show databases")
