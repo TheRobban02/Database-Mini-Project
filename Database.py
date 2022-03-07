@@ -191,13 +191,7 @@ def mainMenu():
 
     elif (options == "5"):
         cursor.execute("SELECT classification, ROUND(AVG(average_lifespan), 2) FROM Species WHERE classification != '0' and average_lifespan != '0' GROUP BY classification")
-        # fetches the data from the database selected from execute
-        outcome = cursor.fetchall()
-        for chain in outcome:
-            if chain[1] == 0:
-                print(f"Classification: {chain[0]}    Average lifespan: indefinite")
-            else:
-                print(f"Classification: {chain[0]}    Average lifespan: {chain[1]}")
+        
         print("Press any key to return to main menu!")
         os.system("pause")
         mainMenu()
@@ -307,7 +301,6 @@ def subMenu():
 cursor = connection.cursor()
 cursor.execute("show databases")
 lst = cursor.fetchall()
-print(lst)
 
 if (DB_NAME,) in lst:
     mainMenu()
