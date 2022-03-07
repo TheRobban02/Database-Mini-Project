@@ -119,8 +119,7 @@ def mainMenu():
     [2] To list all weapons with a specific maximum cost\n\
     [3] To show what ships you can buy at a specific planet\n\
     [4] To show the average price of weapon sizes\n\
-    [5] To show what weapons you can buy at a specific planet\n\
-    [6] To show what language a ship manufacturer speaks\n\
+    [5] To show what weapons you can buy at a specific planet or station\n\
     [Q] To quit the program\n    Enter a number and press enter: ")
 
     if (options == "1"):
@@ -181,7 +180,7 @@ def mainMenu():
 
         # fetches the data from the database selected from execute
         cursor.execute(f"SELECT * FROM avg_price")
-
+        
         for i in cursor:
             print(f"Size: {i[1]} Weapon, Average cost: {i[0]}$")
         
@@ -192,25 +191,42 @@ def mainMenu():
 
     elif (options == "5"):
         
-        choice = input("Type the planet name: ") 
-        cursor.execute(f"CREATE VIEW weapons_planet AS\
-        SELECT\
-        planets.capital,\
-        weapons.weapon_name,\
-        weapons.price\
-        FROM Planets\
-        INNER JOIN Weapons\
-        ON planets.capital = weapons.buy_location\
-        WHERE planets.planet_name = '{choice}'")
+        choice = input("Type the Planet/Stations name: ")
 
-        cursor.execute(f"SELECT * FROM weapons_planet")
+        planet_lst = ["Hurston", "MicroTech", "Crusader", "ArcCorp"]
+
+        # Checks if you typed a station or a planet
+        if(choice not in planet_lst):
+            cursor.execute(f"CREATE VIEW weapons_station AS\
+            SELECT\
+            stations.station_name,\
+            weapons.weapon_name,\
+            weapons.type,\
+            weapons.price\
+            FROM Stations\
+            INNER JOIN Weapons\
+            ON stations.station_id = weapons.buy_location\
+            WHERE Stations.station_id = '{choice}'")
+            cursor.execute(f"SELECT * FROM weapons_station")
+        else:
+            cursor.execute(f"CREATE VIEW weapons_planet AS\
+            SELECT\
+            planets.capital,\
+            weapons.weapon_name,\
+            weapons.type,\
+            weapons.price\
+            FROM Planets\
+            INNER JOIN Weapons\
+            ON planets.capital = weapons.buy_location\
+            WHERE planets.planet_name = '{choice}'")
+            cursor.execute(f"SELECT * FROM weapons_planet")
 
         for i in cursor:
-            print(f"Capital: {i[0]}, Name: {i[1]}, Price: {i[2]}$")
+            print(f"City/Station: {i[0]}, Name: {i[1]}, Type: {i[2]}, Price: {i[3]}$")
         
         os.system("pause")
         print("Press any key to return to main menu!")
-        cursor.execute("DROP VIEW weapons_planet")
+        cursor.execute(f"DROP VIEW IF EXISTS weapons_planet, weapons_station")
         mainMenu()
     
     elif (options == "Q" or "q"):
@@ -221,13 +237,14 @@ def mainMenu():
         mainMenu()
 
 
+# SubMenu is a sub menu to option 1 in the main menu
 def subMenu():
 
     choice = input("Choose what type to show\n\
     [1] To list full description on all the planets\n\
     [2] To list full description on all ship\n\
     [3] To list full description on all species\n\
-    [4] To list full description on all stations\n\
+    [4] To list full description on all space stations\n\
     [5] To list full description on all weapons\n\
     [B] To go back to main menu\n\
     Enter a number and press enter: ")
