@@ -161,7 +161,7 @@ def mainMenu():
         WHERE planets.planet_name = '{choice}'")
 
         frame = pd.read_sql("SELECT * FROM planetsview", connection)
-        frame = frame.rename(columns={'capital': 'Capital', 'ship_name': 'Ship name', 'price':'Price'})
+        frame = frame.rename(columns={'capital': 'Capital', 'ship_name': 'Ship name', 'price':'Price(UEC)'})
 
         pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
         print(frame)
