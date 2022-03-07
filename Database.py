@@ -154,12 +154,12 @@ def mainMenu():
         choice = input("Type the planet name: ") 
         cursor.execute(f"CREATE VIEW planetsview AS\
         SELECT\
-        planets.capital,\
-        ships.ship_name,\
-        ships.price\
-        FROM Planets\
-        INNER JOIN ships\
-        ON MATCH(planets.capital) AGAINST('ships.buy_location')\
+            planets.capital,\
+            ships.ship_name,\
+            ships.price\
+        FROM planets\
+        JOIN ships\
+        ON ships.buy_location LIKE concat('%', + planets.capital, + '%')\
         WHERE planets.planet_name = '{choice}'")
 
         cursor.execute(f"SELECT * FROM planetsview")
