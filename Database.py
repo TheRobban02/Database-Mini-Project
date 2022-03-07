@@ -183,7 +183,7 @@ def mainMenu():
         cursor.execute(f"SELECT * FROM avg_price")
 
         for i in cursor:
-            print(f"Size: {i[0]} Amount: {i[1]}")
+            print(f"Size: {i[1]} Weapon, Average cost: {i[0]}$")
         
         os.system("pause")
         cursor.execute("DROP VIEW avg_price")
