@@ -119,8 +119,7 @@ def mainMenu():
     [2] To list all weapons with a specific maximum cost\n\
     [3] To show what ships you can buy at a specific planet\n\
     [4] To show the average price of weapon sizes\n\
-    [5] To show what weapons you can buy at a specific planet\n\
-    [6] To show what language a ship manufacturer speaks\n\
+    [5] To show what weapons you can buy at a specific planet or station\n\
     [Q] To quit the program\n    Enter a number and press enter: ")
 
     if (options == "1"):
@@ -181,7 +180,7 @@ def mainMenu():
 
         # fetches the data from the database selected from execute
         cursor.execute(f"SELECT * FROM avg_price")
-
+        
         for i in cursor:
             print(f"Size: {i[1]} Weapon, Average cost: {i[0]}$")
         
@@ -238,6 +237,7 @@ def mainMenu():
         mainMenu()
 
 
+# SubMenu is a sub menu to option 1 in the main menu
 def subMenu():
 
     choice = input("Choose what type to show\n\
