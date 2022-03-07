@@ -140,6 +140,7 @@ def mainMenu():
         frame = pd.read_sql("SELECT * FROM selected_weapons", connection)
 
         pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        frame = frame.rename(columns={'weapon_name': 'Weapon Name', 'type': 'Type', 'price':'Price'})
         print(frame)
         
         os.system("pause")
@@ -160,6 +161,7 @@ def mainMenu():
         WHERE planets.planet_name = '{choice}'")
 
         frame = pd.read_sql("SELECT * FROM planetsview", connection)
+        frame = frame.rename(columns={'capital': 'Capital', 'ship_name': 'Ship name', 'price':'Price'})
 
         pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
         print(frame)
@@ -177,6 +179,8 @@ def mainMenu():
         frame = pd.read_sql("SELECT * FROM avg_price", connection)
 
         pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        frame = frame.rename(columns={'ROUND(AVG(price), 2)': 'Price', 'size': 'Size'})
+
         print(frame)
         
         os.system("pause")
@@ -217,6 +221,8 @@ def mainMenu():
             frame = pd.read_sql("SELECT * FROM weapons_planet", connection)
 
         pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        frame = frame.rename(columns={'capital': 'Capital', 'weapon_name': 'Weapon Name', 'type': 'Type', 'price': 'Price(UEC)'})
+
         print(frame)
 
         os.system("pause")
