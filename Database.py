@@ -2,7 +2,7 @@
 import mysql.connector as mysql
 import pandas as pd
 import os
-import columnar
+from columnar import columnar
 
 # Connect to SQL Server
 connection = mysql.connect(
