@@ -137,13 +137,10 @@ def mainMenu():
         FROM Weapons \
         WHERE price < {choice}")
         
-        # fetches the data from the database selected from execute
-        cursor.execute(f"SELECT * FROM selected_weapons")
+        frame = pd.read_sql("SELECT * FROM selected_weapons", connection)
 
-        for i in cursor:
-            for k in i:
-                print(k, end=" | ")
-            print()
+        pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        print(frame)
         
         os.system("pause")
         cursor.execute("DROP VIEW selected_weapons")
@@ -162,10 +159,10 @@ def mainMenu():
         ON ships.buy_location LIKE concat('%', + planets.capital, + '%')\
         WHERE planets.planet_name = '{choice}'")
 
-        cursor.execute(f"SELECT * FROM planetsview")
+        frame = pd.read_sql("SELECT * FROM planetsview", connection)
 
-        for i in cursor:
-            print(f"City/Station: {i[0]}, Name: {i[1]}, Price: {i[2]} UEC")
+        pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        print(frame)
 
         os.system("pause")
         print("Press any key to return to main menu!")
@@ -176,12 +173,11 @@ def mainMenu():
         
         cursor.execute(f"CREATE VIEW avg_price AS SELECT \
         ROUND(AVG(price), 2), size FROM weapons GROUP BY size")
-
-        # fetches the data from the database selected from execute
-        cursor.execute(f"SELECT * FROM avg_price")
         
-        for i in cursor:
-            print(f"Size: {i[1]} Weapon, Average cost: {i[0]} UEC")
+        frame = pd.read_sql("SELECT * FROM avg_price", connection)
+
+        pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        print(frame)
         
         os.system("pause")
         print("Press any key to return to main menu!")
@@ -206,7 +202,7 @@ def mainMenu():
             INNER JOIN Weapons\
             ON weapons.buy_location LIKE concat('%', + stations.station_id, + '%')\
             WHERE Stations.station_id = '{choice}'")
-            cursor.execute(f"SELECT * FROM weapons_station")
+            frame = pd.read_sql("SELECT * FROM weapons_station", connection)
         else:
             cursor.execute(f"CREATE VIEW weapons_planet AS\
             SELECT\
@@ -218,11 +214,11 @@ def mainMenu():
             INNER JOIN Weapons\
             ON weapons.buy_location LIKE concat('%', + planets.capital, + '%')\
             WHERE planets.planet_name = '{choice}'")
-            cursor.execute(f"SELECT * FROM weapons_planet")
+            frame = pd.read_sql("SELECT * FROM weapons_planet", connection)
 
-        for i in cursor:
-            print(f"City/Station: {i[0]}, Name: {i[1]}, Type: {i[2]}, Price: {i[3]} UEC")
-        
+        pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        print(frame)
+
         os.system("pause")
         print("Press any key to return to main menu!")
         cursor.execute(f"DROP VIEW IF EXISTS weapons_planet, weapons_station")
