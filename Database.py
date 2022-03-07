@@ -2,7 +2,7 @@
 import mysql.connector as mysql
 import pandas as pd
 import os
-import columnar
+from columnar import columnar
 
 # Connect to SQL Server
 connection = mysql.connect(
@@ -253,7 +253,7 @@ def subMenu():
         cursor.execute(f"CREATE VIEW planetsdesc AS SELECT * FROM planets")
 
         cursor.execute("SELECT * FROM planetsdesc")
-
+        
         for i in cursor:
             for k in i:
                 print(k, end=" | ")
