@@ -252,13 +252,11 @@ def subMenu():
         # Creates the viev
         cursor.execute(f"CREATE VIEW planetsdesc AS SELECT * FROM planets")
 
-        cursor.execute("SELECT * FROM planetsdesc")
+        frame = pd.read_sql("SELECT * FROM planetsdesc", connection)
+        pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        frame = frame.reset_index(drop=True)
+        print(frame)
         
-        for i in cursor:
-            for k in i:
-                print(k, end=" | ")
-            print()
-
         os.system("pause")
         cursor.execute("DROP VIEW planetsdesc")
         mainMenu()
@@ -267,12 +265,9 @@ def subMenu():
         # Creates the viev
         cursor.execute(f"CREATE VIEW shipsdesc AS SELECT * FROM ships")
 
-        cursor.execute("SELECT * FROM shipsdesc")
-
-        for i in cursor:
-            for k in i:
-                print(k, end=" | ")
-            print()
+        frame = pd.read_sql("SELECT * FROM shipsdesc", connection)
+        pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        print(frame)
 
         os.system("pause")
         cursor.execute("DROP VIEW shipsdesc")
@@ -282,12 +277,9 @@ def subMenu():
         # Creates the viev
         cursor.execute(f"CREATE VIEW speciesdesc AS SELECT * FROM species")
 
-        cursor.execute("SELECT * FROM speciesdesc")
-
-        for i in cursor:
-            for k in i:
-                print(k, end=" | ")
-            print()
+        frame = pd.read_sql("SELECT * FROM speciesdesc", connection)
+        pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        print(frame)
 
         os.system("pause")
         cursor.execute("DROP VIEW speciesdesc")
@@ -297,12 +289,9 @@ def subMenu():
         # Creates the viev
         cursor.execute(f"CREATE VIEW stationdesc AS SELECT * FROM stations")
 
-        cursor.execute("SELECT * FROM stationdesc")
-
-        for i in cursor:
-            for k in i:
-                print(k, end=" | ")
-            print()
+        frame = pd.read_sql("SELECT * FROM stationdesc", connection)
+        pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        print(frame)
 
         os.system("pause")
         cursor.execute("DROP VIEW stationdesc")
@@ -312,12 +301,9 @@ def subMenu():
         # Creates the viev
         cursor.execute(f"CREATE VIEW weapondesc AS SELECT * FROM weapons")
 
-        cursor.execute("SELECT * FROM weapondesc")
-
-        for i in cursor:
-            for k in i:
-                print(k, end=" | ")
-            print()
+        frame = pd.read_sql("SELECT * FROM weapondesc", connection)
+        pd.set_option('display.expand_frame_repr', False, 'display.max_rows', None)
+        print(frame)
 
         os.system("pause")
         cursor.execute("DROP VIEW weapondesc")
