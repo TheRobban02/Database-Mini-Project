@@ -192,25 +192,39 @@ def mainMenu():
 
     elif (options == "5"):
         
-        choice = input("Type the planet name: ") 
-        cursor.execute(f"CREATE VIEW weapons_planet AS\
-        SELECT\
-        planets.capital,\
-        weapons.weapon_name,\
-        weapons.price\
-        FROM Planets\
-        INNER JOIN Weapons\
-        ON planets.capital = weapons.buy_location\
-        WHERE planets.planet_name = '{choice}'")
+        choice = input("Type the planet name: ")
 
-        cursor.execute(f"SELECT * FROM weapons_planet")
+        planet_lst = ["Hurston", "MicroTech", "Crusader", "ArcCorp"]
+
+        if(choice not in planet_lst):
+            cursor.execute(f"CREATE VIEW weapons_station AS\
+            SELECT\
+            stations.station_name,\
+            weapons.weapon_name,\
+            weapons.price\
+            FROM Stations\
+            INNER JOIN Weapons\
+            ON stations.station_id = weapons.buy_location\
+            WHERE Stations.station_id = '{choice}'")
+            cursor.execute(f"SELECT * FROM weapons_station")
+        else:
+            cursor.execute(f"CREATE VIEW weapons_planet AS\
+            SELECT\
+            planets.capital,\
+            weapons.weapon_name,\
+            weapons.price\
+            FROM Planets\
+            INNER JOIN Weapons\
+            ON planets.capital = weapons.buy_location\
+            WHERE planets.planet_name = '{choice}'")
+            cursor.execute(f"SELECT * FROM weapons_planet")
 
         for i in cursor:
-            print(f"Capital: {i[0]}, Name: {i[1]}, Price: {i[2]}$")
+            print(f"City/Station: {i[0]}, Name: {i[1]}, Price: {i[2]}$")
         
         os.system("pause")
         print("Press any key to return to main menu!")
-        cursor.execute("DROP VIEW weapons_planet")
+        cursor.execute(f"DROP VIEW IF EXISTS weapons_planet, weapons_station")
         mainMenu()
     
     elif (options == "Q" or "q"):
@@ -227,7 +241,7 @@ def subMenu():
     [1] To list full description on all the planets\n\
     [2] To list full description on all ship\n\
     [3] To list full description on all species\n\
-    [4] To list full description on all stations\n\
+    [4] To list full description on all space stations\n\
     [5] To list full description on all weapons\n\
     [B] To go back to main menu\n\
     Enter a number and press enter: ")
