@@ -34,7 +34,7 @@ def CreateDatabase():
 
     cursor.execute(f"USE {DB_NAME}")
     cursor.execute("CREATE TABLE Ships (ship_name nvarchar(50) not null primary key, manufacturer nvarchar(60), price int,\
-        buy_location nvarchar(50), role nvarchar(50), cargo_capacity int, lenght float, race nvarchar(20))")
+        buy_location nvarchar(50), role nvarchar(50), cargo_capacity long, lenght long, race nvarchar(20))")
 
     # Create Table
     cursor.execute(f"USE {DB_NAME}")
@@ -50,7 +50,7 @@ def CreateDatabase():
 def PopulateTables():
     
     #loop through the data frames
-    data = pd.read_csv (r'planets.csv', delimiter=";")
+    data = pd.read_csv(r'planets.csv', delimiter=";")
     for i,row in data.iterrows():
             
         #here %S means string values 
@@ -61,11 +61,11 @@ def PopulateTables():
         connection.commit()
     
     #loop through the data frame
-    data = pd.read_csv (r'species.csv', delimiter=";")
+    data = pd.read_csv(r'species.csv', delimiter=";")
     for i,row in data.iterrows():
         
         #here %S means string values 
-        sql = f"INSERT INTO {DB_NAME}.species VALUES (%s,%s,%s,%s)"
+        sql = f"INSERT INTO {DB_NAME}.species (species_name, sentient, language, goverment) VALUES (%s,%s,%s,%s)"
         cursor.execute(sql, tuple(row))
         
         #save our changes
@@ -87,14 +87,14 @@ def PopulateTables():
     for i,row in data.iterrows():
             
         #here %S means string values 
-        sql = f"INSERT INTO {DB_NAME}.weapons VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
+        sql = f"INSERT INTO {DB_NAME}.weapons VALUES (%s,%s,%s,%s,%s,%s,%s)"
         cursor.execute(sql, tuple(row))
             
         #save our changes
         connection.commit()
     
     #loop through the data frames
-    data = pd.read_csv(r'spacestation.cvs', delimiter=";")
+    data = pd.read_csv(r'spacestations.cvs', delimiter=";")
     for i,row in data.iterrows():
             
         #here %S means string values 
