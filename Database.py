@@ -164,13 +164,11 @@ def mainMenu():
         cursor.execute(f"SELECT * FROM planetsview")
 
         for i in cursor:
-            for k in i:
-                print(k, end=" ")
-            print()
+            print(f"City/Station: {i[0]}, Name: {i[1]}, Price: {i[2]} UEC")
 
+        os.system("pause")
         print("Press any key to return to main menu!")
         cursor.execute("DROP VIEW planetsview")
-        os.system("pause")
         mainMenu()
 
     elif (options == "4"):
@@ -184,9 +182,9 @@ def mainMenu():
         for i in cursor:
             print(f"Size: {i[1]} Weapon, Average cost: {i[0]} UEC")
         
+        os.system("pause")
         print("Press any key to return to main menu!")
         cursor.execute("DROP VIEW avg_price")
-        os.system("pause")
         mainMenu()
 
     elif (options == "5"):
