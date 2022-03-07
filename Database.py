@@ -182,7 +182,7 @@ def mainMenu():
         cursor.execute(f"SELECT * FROM avg_price")
         
         for i in cursor:
-            print(f"Size: {i[1]} Weapon, Average cost: {i[0]}$")
+            print(f"Size: {i[1]} Weapon, Average cost: {i[0]} UEC")
         
         print("Press any key to return to main menu!")
         cursor.execute("DROP VIEW avg_price")
@@ -205,7 +205,7 @@ def mainMenu():
             weapons.price\
             FROM Stations\
             INNER JOIN Weapons\
-            ON stations.station_id = weapons.buy_location\
+            ON weapons.buy_location LIKE concat('%', + stations.station_id, + '%')\
             WHERE Stations.station_id = '{choice}'")
             cursor.execute(f"SELECT * FROM weapons_station")
         else:
@@ -217,12 +217,12 @@ def mainMenu():
             weapons.price\
             FROM Planets\
             INNER JOIN Weapons\
-            ON planets.capital = weapons.buy_location\
+            ON weapons.buy_location LIKE concat('%', + planets.capital, + '%')\
             WHERE planets.planet_name = '{choice}'")
             cursor.execute(f"SELECT * FROM weapons_planet")
 
         for i in cursor:
-            print(f"City/Station: {i[0]}, Name: {i[1]}, Type: {i[2]}, Price: {i[3]}$")
+            print(f"City/Station: {i[0]}, Name: {i[1]}, Type: {i[2]}, Price: {i[3]} UEC")
         
         os.system("pause")
         print("Press any key to return to main menu!")
