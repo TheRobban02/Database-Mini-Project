@@ -94,7 +94,7 @@ def PopulateTables():
         connection.commit()
     
     #loop through the data frames
-    data = pd.read_csv(r'spacestations.cvs', delimiter=";")
+    data = pd.read_csv(r'spacestations.csv', delimiter=";")
     for i,row in data.iterrows():
             
         #here %S means string values 
