@@ -1,6 +1,7 @@
 # Import mysql connector, pandas, numpy and msvcrt
 import mysql.connector as mysql
 import pandas as pd
+import os
 
 # Connect to SQL Server
 connection = mysql.connect(
@@ -11,7 +12,7 @@ connection = mysql.connect(
 
 )
 
-DB_NAME = "starCitizen"
+DB_NAME = "starcitizen"
 
 def CreateDatabase():
 
@@ -46,6 +47,7 @@ def CreateDatabase():
         black_market nvarchar(20), hangars int, pads int, docking_ports int, station_name nvarchar(50), system nvarchar(20))")
 
     PopulateTables()
+
 
 def PopulateTables():
     
@@ -103,10 +105,211 @@ def PopulateTables():
             
         #save our changes
         connection.commit()
+    
+    # Go to main menu
+    mainMenu()
+
+
+def mainMenu(): 
+    
+    #Creates and runs the mainmenu
+    cursor.execute(f"USE {DB_NAME}")
+    options = input("Please make a choice:\n\
+    [1] To choose a specific list to view\n\
+    [2] To list all weapons with a specific maximum cost\n\
+    [3] To show what ships you can buy at a specific planet\n\
+    [4] To show the average price of weapon sizes\n\
+    [5] To show what weapons you can buy at a specific planet\n\
+    [6] To show what language a ship manufacturer speaks\n\
+    [Q] To quit the program\n    Enter a number and press enter: ")
+
+    if (options == "1"):
+        subMenu()
+
+    elif (options == "2"):
+        
+        choice = int(input("Whats the maximum price of the weapons to be shown? "))
+        
+        cursor.execute(f"CREATE VIEW selected_weapons AS SELECT \
+        weapon_name, \
+        type, \
+        price \
+        FROM Weapons \
+        WHERE price < {choice}")
+        
+        # fetches the data from the database selected from execute
+        cursor.execute(f"SELECT * FROM selected_weapons")
+
+        for i in cursor:
+            for k in i:
+                print(k, end=" | ")
+            print()
+        
+        os.system("pause")
+        cursor.execute("DROP VIEW selected_weapons")
+        mainMenu()
+            
+    elif (options == "3"):
+        
+        choice = input("Type the planet name: ") 
+        cursor.execute(f"CREATE VIEW planetsview AS\
+        SELECT\
+        planets.capital,\
+        ships.ship_name,\
+        ships.price\
+        FROM Planets\
+        INNER JOIN ships\
+        ON MATCH(planets.capital) AGAINST('ships.buy_location')\
+        WHERE planets.planet_name = '{choice}'")
+
+        cursor.execute(f"SELECT * FROM planetsview")
+
+        for i in cursor:
+            for k in i:
+                print(k, end=" ")
+            print()
+
+        print("Press any key to return to main menu!")
+        cursor.execute("DROP VIEW planetsview")
+        os.system("pause")
+        mainMenu()
+
+    elif (options == "4"):
+        
+        cursor.execute(f"CREATE VIEW avg_price AS SELECT \
+        ROUND(AVG(price), 2), size FROM weapons GROUP BY size")
+
+        # fetches the data from the database selected from execute
+        cursor.execute(f"SELECT * FROM avg_price")
+
+        for i in cursor:
+            print(f"Size: {i[0]} Amount: {i[1]}")
+        
+        os.system("pause")
+        cursor.execute("DROP VIEW avg_price")
+        mainMenu()
+
+    elif (options == "5"):
+        cursor.execute("SELECT classification, ROUND(AVG(average_lifespan), 2) FROM Species WHERE classification != '0' and average_lifespan != '0' GROUP BY classification")
+        # fetches the data from the database selected from execute
+        outcome = cursor.fetchall()
+        for chain in outcome:
+            if chain[1] == 0:
+                print(f"Classification: {chain[0]}    Average lifespan: indefinite")
+            else:
+                print(f"Classification: {chain[0]}    Average lifespan: {chain[1]}")
+        print("Press any key to return to main menu!")
+        os.system("pause")
+        mainMenu()
+    
+    elif (options == "Q" or "q"):
+        exit
+    
+    else:
+        print(f"{options} is not a valid option.")
+        mainMenu()
+
+
+def subMenu():
+
+    choice = input("Choose what type to show\n\
+    [1] To list full description on all the planets\n\
+    [2] To list full description on all ship\n\
+    [3] To list full description on all species\n\
+    [4] To list full description on all stations\n\
+    [5] To list full description on all weapons\n\
+    [B] To go back to main menu\n\
+    Enter a number and press enter: ")
+
+    if (choice == "1"):
+        # Creates the viev
+        cursor.execute(f"CREATE VIEW planetsdesc AS SELECT * FROM planets")
+
+        cursor.execute("SELECT * FROM planetsdesc")
+
+        for i in cursor:
+            for k in i:
+                print(k, end=" | ")
+            print()
+
+        os.system("pause")
+        cursor.execute("DROP VIEW planetsdesc")
+        mainMenu()
+
+    elif (choice == "2"):
+        # Creates the viev
+        cursor.execute(f"CREATE VIEW shipsdesc AS SELECT * FROM ships")
+
+        cursor.execute("SELECT * FROM shipsdesc")
+
+        for i in cursor:
+            for k in i:
+                print(k, end=" | ")
+            print()
+
+        os.system("pause")
+        cursor.execute("DROP VIEW shipsdesc")
+        mainMenu()
+
+    elif (choice == "3"):
+        # Creates the viev
+        cursor.execute(f"CREATE VIEW speciesdesc AS SELECT * FROM species")
+
+        cursor.execute("SELECT * FROM speciesdesc")
+
+        for i in cursor:
+            for k in i:
+                print(k, end=" | ")
+            print()
+
+        os.system("pause")
+        cursor.execute("DROP VIEW speciesdesc")
+        mainMenu()
+
+    elif (choice == "4"):
+        # Creates the viev
+        cursor.execute(f"CREATE VIEW stationdesc AS SELECT * FROM stations")
+
+        cursor.execute("SELECT * FROM stationdesc")
+
+        for i in cursor:
+            for k in i:
+                print(k, end=" | ")
+            print()
+
+        os.system("pause")
+        cursor.execute("DROP VIEW stationdesc")
+        mainMenu()
+        
+    elif (choice == "5"):
+        # Creates the viev
+        cursor.execute(f"CREATE VIEW weapondesc AS SELECT * FROM weapons")
+
+        cursor.execute("SELECT * FROM weapondesc")
+
+        for i in cursor:
+            for k in i:
+                print(k, end=" | ")
+            print()
+
+        os.system("pause")
+        cursor.execute("DROP VIEW weapondesc")
+        mainMenu()
+        
+    elif (choice == "B" or "b"):
+        mainMenu()
+
+    else:
+        print(f"{choice} is not a valid option.")
+        subMenu()
 
 
 cursor = connection.cursor()
 cursor.execute("show databases")
 lst = cursor.fetchall()
+print(lst)
 
-CreateDatabase()
+if (DB_NAME,) in lst:
+    mainMenu()
+else:
+    CreateDatabase()
