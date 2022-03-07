@@ -185,15 +185,32 @@ def mainMenu():
         for i in cursor:
             print(f"Size: {i[1]} Weapon, Average cost: {i[0]}$")
         
-        os.system("pause")
+        print("Press any key to return to main menu!")
         cursor.execute("DROP VIEW avg_price")
+        os.system("pause")
         mainMenu()
 
     elif (options == "5"):
-        cursor.execute("SELECT classification, ROUND(AVG(average_lifespan), 2) FROM Species WHERE classification != '0' and average_lifespan != '0' GROUP BY classification")
         
-        print("Press any key to return to main menu!")
+        choice = input("Type the planet name: ") 
+        cursor.execute(f"CREATE VIEW weapons_planet AS\
+        SELECT\
+        planets.capital,\
+        weapons.weapon_name,\
+        weapons.price\
+        FROM Planets\
+        INNER JOIN Weapons\
+        ON planets.capital = weapons.buy_location\
+        WHERE planets.planet_name = '{choice}'")
+
+        cursor.execute(f"SELECT * FROM weapons_planet")
+
+        for i in cursor:
+            print(f"Capital: {i[0]}, Name: {i[1]}, Price: {i[2]}$")
+        
         os.system("pause")
+        print("Press any key to return to main menu!")
+        cursor.execute("DROP VIEW weapons_planet")
         mainMenu()
     
     elif (options == "Q" or "q"):
