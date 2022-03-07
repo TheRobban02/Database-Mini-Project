@@ -50,7 +50,7 @@ def CreateDatabase():
 def PopulateTables():
     
     #loop through the data frames
-    data = pd.read_csv (r'planets.csv', delimiter=";")
+    data = pd.read_csv(r'Planets.csv', delimiter=";")
     for i,row in data.iterrows():
             
         #here %S means string values 
@@ -61,18 +61,18 @@ def PopulateTables():
         connection.commit()
     
     #loop through the data frame
-    data = pd.read_csv (r'species.csv', delimiter=";")
+    data = pd.read_csv(r'Species.csv', delimiter=";")
     for i,row in data.iterrows():
         
         #here %S means string values 
-        sql = f"INSERT INTO {DB_NAME}.species VALUES (%s,%s,%s,%s)"
+        sql = f"INSERT INTO {DB_NAME}.species (species_name, sentient, language, goverment) VALUES (%s,%s,%s,%s)"
         cursor.execute(sql, tuple(row))
         
         #save our changes
         connection.commit()
 
     #loop through the data frames
-    data = pd.read_csv(r'ships.csv', delimiter=";")
+    data = pd.read_csv(r'Ships.csv', delimiter=";")
     for i,row in data.iterrows():
             
         #here %S means string values 
@@ -83,7 +83,7 @@ def PopulateTables():
         connection.commit()
     
     #loop through the data frames
-    data = pd.read_csv(r'weapons.csv', delimiter=";")
+    data = pd.read_csv(r'Weapons.csv', delimiter=";")
     for i,row in data.iterrows():
             
         #here %S means string values 
@@ -94,7 +94,7 @@ def PopulateTables():
         connection.commit()
     
     #loop through the data frames
-    data = pd.read_csv(r'spacestation.cvs', delimiter=";")
+    data = pd.read_csv(r'SpaceStations.cvs', delimiter=";")
     for i,row in data.iterrows():
             
         #here %S means string values 
