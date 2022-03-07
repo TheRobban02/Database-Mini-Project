@@ -192,15 +192,17 @@ def mainMenu():
 
     elif (options == "5"):
         
-        choice = input("Type the planet name: ")
+        choice = input("Type the Planet/Stations name: ")
 
         planet_lst = ["Hurston", "MicroTech", "Crusader", "ArcCorp"]
 
+        # Checks if you typed a station or a planet
         if(choice not in planet_lst):
             cursor.execute(f"CREATE VIEW weapons_station AS\
             SELECT\
             stations.station_name,\
             weapons.weapon_name,\
+            weapons.type,\
             weapons.price\
             FROM Stations\
             INNER JOIN Weapons\
@@ -212,6 +214,7 @@ def mainMenu():
             SELECT\
             planets.capital,\
             weapons.weapon_name,\
+            weapons.type,\
             weapons.price\
             FROM Planets\
             INNER JOIN Weapons\
@@ -220,7 +223,7 @@ def mainMenu():
             cursor.execute(f"SELECT * FROM weapons_planet")
 
         for i in cursor:
-            print(f"City/Station: {i[0]}, Name: {i[1]}, Price: {i[2]}$")
+            print(f"City/Station: {i[0]}, Name: {i[1]}, Type: {i[2]}, Price: {i[3]}$")
         
         os.system("pause")
         print("Press any key to return to main menu!")
