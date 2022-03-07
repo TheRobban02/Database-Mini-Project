@@ -233,9 +233,9 @@ def mainMenu():
     elif (options == "Q" or "q"):
         exit
     
-    else:
-        print(f"{options} is not a valid option.")
-        mainMenu()
+    # elif (options != "1" or options != "2" or options != "3" or options != "4" or options != "5" or options != "Q" or options !=" q"):
+    #     print(f"{options} is not a valid option.")
+    #     mainMenu()
 
 
 # SubMenu is a sub menu to option 1 in the main menu
