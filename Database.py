@@ -1,4 +1,5 @@
-# Import mysql connector, pandas, numpy and msvcrt
+# Import mysql connector, pandas and os
+# pandas and mysql connecter need to be installed using pip
 import mysql.connector as mysql
 import pandas as pd
 import os
