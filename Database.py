@@ -1,5 +1,5 @@
 # Import mysql connector, pandas and os
-# pandas and mysql connecter need to be installed using pip
+# pandas and mysql connector need to be installed using pip
 import mysql.connector as mysql
 import pandas as pd
 import os
@@ -28,14 +28,14 @@ def CreateDatabase():
 
     # Create Table
     cursor.execute(f"USE {DB_NAME}")
-    cursor.execute("CREATE TABLE Planets (planet_name nvarchar(50) not null primary key,\
-        capital nvarchar(50),system nvarchar(20),moons nvarchar(100),\
-        space_station nvarchar(50), min_temp int, max_temp int)")
-
-    # Create Table
-    cursor.execute(f"USE {DB_NAME}")
-    cursor.execute("CREATE TABLE Species (species_name varchar(50) not null primary key,\
-        sentient nvarchar(20), language nvarchar(20), goverment nvarchar(100))")
+    cursor.execute("CREATE TABLE Planets (\
+        planet_name nvarchar(50) not null primary key,\
+        capital nvarchar(50),\
+        system nvarchar(20),\
+        moons nvarchar(100),\
+        space_station nvarchar(50),\
+        min_temp int,\
+        max_temp int)")
 
     cursor.execute(f"USE {DB_NAME}")
     cursor.execute("CREATE TABLE Ships (\
@@ -63,8 +63,8 @@ def CreateDatabase():
     cursor.execute("CREATE TABLE Stations (\
         station_id nvarchar(50) not null primary key,\
         planet nvarchar(50),\
-        refinery nvarchar(20),\
-        black_market nvarchar(20),\
+        refinery boolean,\
+        black_market boolean,\
         hangars int,\
         pads int,\
         docking_ports int,\
@@ -83,17 +83,6 @@ def PopulateTables():
 
         # here %S means string values 
         sql = f"INSERT INTO {DB_NAME}.planets VALUES (%s,%s,%s,%s,%s,%s,%s)"
-        cursor.execute(sql, tuple(row))
-
-        # save our changes
-        connection.commit()
-
-    # loop through the data frame
-    data = pd.read_csv(r'species.csv', delimiter=";")
-    for i,row in data.iterrows():
-
-        # here %S means string values
-        sql = f"INSERT INTO {DB_NAME}.species VALUES (%s,%s,%s,%s)"
         cursor.execute(sql, tuple(row))
 
         # save our changes
@@ -253,10 +242,12 @@ def mainMenu():
                 weapons.price\
                 FROM Stations\
             INNER JOIN Weapons\
-            ON weapons.buy_location LIKE concat('%', + stations.station_id, + '%')\
+            ON weapons.buy_location LIKE concat('%', + stations.station_id,\
+                + '%')\
             WHERE Stations.station_id = '{choice}'")
 
-            # Using pandas library to create a nicer table from the VIEW created.
+            # Using pandas library to create a
+            # nicer table from the VIEW created.
             frame = pd.read_sql("SELECT * FROM weapons_station", connection)
         else:
             cursor.execute(f"CREATE VIEW weapons_planet AS\
