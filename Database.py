@@ -143,7 +143,7 @@ def mainMenu():
     elif (options == "2"):
 
         choice = int(input("Whats the maximum\
-            price of the weapons to be shown? "))
+ price of the weapons to be shown? "))
 
         cursor.execute(f"CREATE VIEW selected_weapons AS SELECT \
             weapon_name, \
