@@ -292,9 +292,8 @@ def subMenu():
     choice = input("Choose what type to show\n\
     [1] To list full description on all the planets\n\
     [2] To list full description on all ship\n\
-    [3] To list full description on all species\n\
-    [4] To list full description on all space stations\n\
-    [5] To list full description on all weapons\n\
+    [3] To list full description on all space stations\n\
+    [4] To list full description on all weapons\n\
     [B] To go back to main menu\n\
     Enter a number and press enter: ")
 
@@ -333,23 +332,6 @@ def subMenu():
 
     elif (choice == "3"):
         # Creates the VIEW
-        cursor.execute("CREATE VIEW speciesdesc AS SELECT * FROM species")
-
-        # Using pandas library to create a nicer table from the VIEW created.
-        frame = pd.read_sql("SELECT * FROM speciesdesc", connection)
-        pd.set_option(
-            'display.expand_frame_repr', False,
-            'display.max_rows', None)
-
-        print(frame)
-
-        os.system("pause")
-        # Drops the VIEW so it doesnt stay in the database
-        cursor.execute("DROP VIEW speciesdesc")
-        mainMenu()
-
-    elif (choice == "4"):
-        # Creates the VIEW
         cursor.execute("CREATE VIEW stationdesc AS SELECT * FROM stations")
 
         # Using pandas library to create a nicer table from the VIEW created.
@@ -364,7 +346,7 @@ def subMenu():
         cursor.execute("DROP VIEW stationdesc")
         mainMenu()
 
-    elif (choice == "5"):
+    elif (choice == "4"):
         # Creates the VIEW
         cursor.execute("CREATE VIEW weapondesc AS SELECT * FROM weapons")
 
